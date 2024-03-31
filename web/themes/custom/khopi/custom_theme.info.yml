@@ -1,10 +1,10 @@
-name: Custom Theme
+name: Khopi
 type: theme
-description: 'Custom theme for a blog website.'
+description: 'Khopi for a blog website.'
 core_version_requirement: ^8 || ^9
 base theme: classy
 libraries:
-- custom_theme/global-styling
+- khopi/global-styling
 regions:
   branding: Branding
   navigation: Main navigation
