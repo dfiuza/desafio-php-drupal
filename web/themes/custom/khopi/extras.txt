@@ -1,0 +1,8 @@
+Crie um tipo de conteúdo personalizado para postagens de blog:
+Acesse admin/structure/typese clique em Add content type.
+Insira um nome para o seu tipo de conteúdo, por exemplo, Blog post.
+Adicione os seguintes campos:
+Título (obrigatório)
+Corpo (obrigatório)
+Data de publicação (obrigatório, definido como valor padrão para a 
+data atual). Salve o tipo de conteúdo.

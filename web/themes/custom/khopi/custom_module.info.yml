@@ -1,0 +1,4 @@
+name: Custom Module
+type: module
+description: 'Custom module for adding specific functionality to the site.'
+core_version_requirement: ^8 || ^9

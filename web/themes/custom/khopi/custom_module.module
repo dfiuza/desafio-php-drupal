@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function custom_module_block_info() {
+  $blocks = [];
+  $blocks['author_info'] = [
+    'info' => t('Author info'),
+    'category' => t('Custom'),
+  ];
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function custom_module_block_view($delta = '') {
+  switch ($delta) {
+    case 'author_info':
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof \Drupal\node\NodeInterface) {
+        $author = $node->getOwner();
+        $build = [
+          'author_info' => [
+            '#type' => 'markup',
+            '#markup' => t('Author: @name, Publication date: @date', [
+              '@name' => $author->getDisplayName(),
+              '@date' => $node->get('field_publication_date')->value,
+            ]),
+          ],
+        ];
+      }
+      return $build;
+  }
+}
